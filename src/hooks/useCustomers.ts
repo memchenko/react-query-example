@@ -13,7 +13,7 @@ export const useCustomers = () => {
             getNextPageParam(lastPage: Customer[], allPages: Customer[][]) {
                 return lastPage.length >= PAGE_SIZE ? allPages.length : null;
             },
-        }
+        },
     );
     const customers = (data?.pages ? data.pages.flat() : data || []) as Customer[];
 
